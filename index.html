@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>tic tac toe</title>
+  </head>
+  <body>
+    <h1>tic tac toe</h1>
+    <div class="playerSelect">
+      <div class="player player--0 player--active">Player 1</div>
+      <div class="player player--1">Player 2</div>
+    </div>
+    <button class="playAgain hidden">Play Again</button>
+    <h2 class="resultMsg hidden">Player 1 wins</h2>
+    <div class="main">
+      <table class="tr">
+        <tr>
+          <td class="tp sd-1 cr-1 td" id="td"></td>
+          <td class="tp sd-2 td" id="td"></td>
+          <td class="tp sd-3 cr-2 td" id="td"></td>
+        </tr>
+        <tr>
+          <td class="sd-1 md td" id="td"></td>
+          <td class="sd-2 md cr-1 cr-2 td" id="td"></td>
+          <td class="sd-3 md td" id="td"></td>
+        </tr>
+        <tr>
+          <td class="bt sd-1 cr-2 td" id="td"></td>
+          <td class="bt sd-2 td" id="td"></td>
+          <td class="bt sd-3 cr-1 td" id="td"></td>
+        </tr>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

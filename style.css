@@ -1,0 +1,114 @@
+body {
+  font-family: "Permanent Marker", cursive;
+  text-align: center;
+}
+h1 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3rem;
+  color: rgb(3, 129, 129);
+}
+h2 {
+  font-size: 2.2rem;
+  color: rgb(3, 129, 129);
+  position: absolute;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main {
+  width: 30%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 20rem;
+}
+table {
+  margin: auto;
+  border-collapse: collapse;
+}
+.hidden {
+  visibility: hidden;
+}
+th,
+td {
+  border-collapse: collapse;
+}
+td {
+  width: 6.25rem;
+  height: 6.25rem;
+  font-size: 3rem;
+  color: rgb(3, 129, 129);
+}
+td:nth-child(even) {
+  border-left: 0.5rem solid rgb(3, 129, 129);
+  border-right: 0.5rem solid rgb(3, 129, 129);
+}
+tr:nth-child(even) {
+  border-top: 0.5rem solid rgb(3, 129, 129);
+  border-bottom: 0.5rem solid rgb(3, 129, 129);
+  border-radius: 0.5rem;
+}
+.playerSelect {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 17rem;
+  background-color: rgba(124, 218, 218, 0.5);
+  border-radius: 1rem;
+}
+.playAgain {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12rem;
+  border-radius: 1rem;
+  border: none;
+  height: 2.7rem;
+  font-size: 1.8rem;
+  color: rgb(3, 129, 129);
+  background-color: rgb(129, 231, 231);
+  font-family: "Permanent Marker", cursive;
+}
+.player--active {
+  background-color: rgba(124, 218, 218, 0.8);
+}
+.player {
+  flex: 50%;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .main {
+    width: 45%;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  .main {
+    width: 30%;
+    position: absolute;
+    top: 69%;
+    left: 50%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .main {
+    width: 75%;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+}
+@media screen and (max-width: 300px) {
+  .main {
+    width: 75%;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+}
