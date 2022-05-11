@@ -17,6 +17,7 @@ const td = document.querySelectorAll(".td");
 class App {
   #activePlayer = 0;
   #clicked;
+  #playing = true;
   #tp_Player0 = [];
   #tp_Player1 = [];
   #bt_Player0 = [];
@@ -61,6 +62,7 @@ class App {
     this.#cr2_Player0 = [];
     this.#cr2_Player1 = [];
     this.#winner = false;
+    this.#playing = true;
     this.#ex = 0;
     this.#activePlayer = 0;
     player0.classList.add("player--active");
@@ -76,20 +78,23 @@ class App {
     }
   }
   _playGame(e) {
-    if (e.target.id === "td") {
-      //assigning clicked
-      this.#clicked = e.target;
-      // check if the position is occupied
-      if (e.target.textContent === "X" || e.target.textContent === "O") return;
-      e.target.textContent = this.#player[this.#activePlayer];
-      if (this.#activePlayer === 0) this.#ex++;
+    if (this.#playing) {
+      if (e.target.id === "td") {
+        //assigning clicked
+        this.#clicked = e.target;
+        // check if the position is occupied
+        if (e.target.textContent === "X" || e.target.textContent === "O")
+          return;
+        e.target.textContent = this.#player[this.#activePlayer];
+        if (this.#activePlayer === 0) this.#ex++;
 
-      //conditions for winning and game play
-      this._conditions();
-      //for draw
-      this._forDraw();
-      // switch palyer
-      this._switchPlayer();
+        //conditions for winning and game play
+        this._conditions();
+        //for draw
+        this._forDraw();
+        // switch palyer
+        this._switchPlayer();
+      }
     }
   }
   _switchPlayer() {
@@ -210,18 +215,21 @@ class App {
   _player1Win() {
     resultMsg.classList.remove("hidden");
     resultMsg.textContent = "Player 1 wins";
+    this.#playing = false;
     playerSelectDiv.classList.add("hidden");
     playAgainBtn.classList.remove("hidden");
   }
   _player2Win() {
     resultMsg.classList.remove("hidden");
     resultMsg.textContent = "Player 2 wins";
+    this.#playing = false;
     playerSelectDiv.classList.add("hidden");
     playAgainBtn.classList.remove("hidden");
   }
   _draw() {
     resultMsg.classList.remove("hidden");
     resultMsg.textContent = "Draw";
+    this.#playing = false;
     playerSelectDiv.classList.add("hidden");
     playAgainBtn.classList.remove("hidden");
   }
