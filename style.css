@@ -104,11 +104,39 @@ tr:nth-child(even) {
     font-size: 1.7rem;
   }
 }
+@media screen and (max-width: 450px) {
+  .main {
+    width: 75%;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  .playAgain {
+    width: 9rem;
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (max-width: 300px) {
   .main {
     width: 75%;
   }
   h2 {
     font-size: 1.2rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 250px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .playAgain {
+    width: 7rem;
+    font-size: 1rem;
   }
 }
